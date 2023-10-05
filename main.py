@@ -2,6 +2,8 @@ import random as r
 import math
 from termcolor import cprint
 from pyfiglet import figlet_format
+
+from ListsExercises import *
 from TypesExercises import *
 import os
 from StringsExercises import *
@@ -11,8 +13,8 @@ from StringsExercises import *
 
 try:
     while True:
-        cprint(figlet_format('Collection'), 'red')
-        choice = int(input("What lesson do you want?\n1. Variable Types\n2. String Manipulation"))
+        cprint(figlet_format('Collection'), 'cyan')
+        choice = int(input("What lesson do you want?\n1. Variable Types\n2. String Manipulation\n3. Lists and Arrays\n4. "))
         os.system('cls')
         match choice:
             case 1:
@@ -57,11 +59,18 @@ try:
                         input("\nPress enter to continue")
 
             case 3:
-                print("")
-                choice = int(input("What lesson do you want?"))
+                print("Lists and Arrays Exercises")
+                choice = int(input("What topic do you want? \n1. Day of the week\n2. Simon Says\n3. Shopping List\n4. "))
                 match choice:
                     case 1:
-                        print()
+                        daysOfTheWeek()
+                        input("\nPress enter to continue")
+                    case 2:
+                        simonSays()
+                        input("\nPress enter to continue")
+                    case 3:
+                        shoppingList()
+                        input("\nPress enter to continue")
 
             case 4:
                 print("")
